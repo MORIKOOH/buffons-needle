@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Buffon's Needle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="control-panel">
+        <img src="./images/approxPi.svg" alt="" srcset="">
+        <label for="lenInput">針の長さ L</label>
+        <input id="lenInput" type="number" value="1.0" step="0.1">
+
+        <label for="spaceInput">線間隔 d</label>
+        <input id="spaceInput" type="number" value="1.0" step="0.1">
+
+        <label for="numInput">針の本数 N</label>
+        <input id="numInput" type="number" value="50" step="10">
+
+        <label for="spreadInput">投げる範囲 ±R</label>
+        <input id="spreadInput" type="number" value="5" step="1">
+
+
+        <div>
+            <button id="startBtn" class="startBtn">START</button>
+        </div>
+
+        <div id="result" class="result">
+        </div>
+    </div>
+
+    <!-- ✅ グローバル THREE -->
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <!--グローバル CANNON.js（旧版） -->
+    <script src="https://cdn.jsdelivr.net/npm/cannon@0.6.2/build/cannon.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
