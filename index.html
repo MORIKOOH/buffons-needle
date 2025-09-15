@@ -23,18 +23,21 @@
         <label for="spreadInput">投げる範囲 ±R</label>
         <input id="spreadInput" type="number" value="5" min="1" step="1">
 
+        <label for="progressBar" style="grid-column: 1 / -1;">進行状況</label>
+        <progress id="progressBar" max="100" value="0" style="grid-column: 1 / -1; width:100%; height:20px;"></progress>
+        <div id="progressLabel" style="grid-column: 1 / -1; text-align:center; font-size:14px;"></div>
 
         <div>
-            <button id="startBtn" class="startBtn">START</button>
+            <button id="startBtn" class="startBtn">START(Enter)</button>
         </div>
 
         <div id="result" class="result">
         </div>
     </div>
 
-    <!-- ✅ グローバル THREE -->
+    <!-- グローバル THREE -->
     <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
-    <!--グローバル CANNON.js（旧版） -->
+    <!-- グローバル CANNON.js -->
     <script src="https://cdn.jsdelivr.net/npm/cannon@0.6.2/build/cannon.min.js"></script>
     <script src="main.js"></script>
 </body>

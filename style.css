@@ -1,57 +1,69 @@
 @charset "UTF-8";
 
-        body {
-            margin: 0;
-            overflow: hidden;
-            background: #ffffff;
-        }
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #ffffff;
+}
 
-        canvas {
-            display: block;
-        }
+canvas {
+    display: block;
+}
 
-        .control-panel {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            width: 300px;
-            background: #ffffffcc;
-            padding: 10px;
-            border-radius: 8px;
-            font-family: sans-serif;
-            border: 1px solid black;
-            display: grid;
-            grid-template-columns: auto 100px;
-            row-gap: 6px;
-            column-gap: 8px;
-            align-items: center;
-        }
+.control-panel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    background: #ffffffcc;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: auto 100px;
+    row-gap: 6px;
+    column-gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
 
-        .control-panel>img {
-            width: 100%;
-            background-color: white;
-            grid-column: 1 / -1;
-        }
+.control-panel>img {
+    width: 100%;
+    background-color: white;
+    grid-column: 1 / -1;
+}
 
-        .control-panel>input {
-            font-size: 18px;
-        }
+.control-panel>input {
+    font-size: 18px;
+}
 
-        .startBtn {
-            padding: 5px 20px;
-            border-radius: 8px;
-            font-size: 24px;
-            grid-column: 1 / -1;
-            text-align: center;
-            margin-top: 6px;
-        }
+.startBtn {
+    grid-column: 1 / -1;  /* ★2列ぶち抜き */
+    width: 100%;          /* ★横幅いっぱい */
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    margin: 6px 0;
+    text-align: center;
+}
 
-        .result {
-            grid-column: 1 / -1;
-            margin-top: 6px;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-            background-color: #ffffff;
-            white-space: pre-line;
-        }
+.startBtn:hover {
+    background-color: #e0e0e0;
+}
+
+.startBtn:active {
+    background-color: #cfcfcf;
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    background-color: #ffffff;
+    white-space: pre-line;
+}
